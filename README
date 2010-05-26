@@ -1,0 +1,8 @@
+== Welcome to JRubyHub
+
+JRubyHub is a Rails 3 application that showcases JRuby and Java
+technologies mixed with Rails.
+
+We're planning to run a live instance of JRubyHub on the
+http://jruby.org site eventually. Currently we're in heavy development
+mode.
