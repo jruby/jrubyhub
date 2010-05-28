@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'bundler'
+Bundler.setup(:default, :test)
+require 'rspec'
+Rspec = RSpec                   # temp cucumber compatibility
+require 'cucumber'
+load Cucumber::BINARY
