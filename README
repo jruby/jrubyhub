@@ -6,3 +6,18 @@ technologies mixed with Rails.
 We're planning to run a live instance of JRubyHub on the
 http://jruby.org site eventually. Currently we're in heavy development
 mode.
+
+== Development Notes
+
+- We're using a custom fork of Spork for fast re-running of Cucumber
+  features in a single JRuby process. We had to tweak some things to
+  get this working clean:
+  - Nick's Spork fork features a single process looper (originally by
+    Roger Pack) that also has to reset the Cucumber::StepMother each
+    time so it doesn't report previous runs' results.
+  - Set config.cache_classes = false in config/environments/test.rb so
+    that code gets reloaded in the test environment. Cucumber warns
+    about this breaking its use_transactional_fixtures method, but
+    we're not using transactional fixtures here.
+  - Run '::ActiveSupport::Dependencies.clear' in the Spork.each_run
+    block to reload code.
