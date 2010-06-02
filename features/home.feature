@@ -7,3 +7,9 @@ Feature: Home page
     Given I am on the home page
     
     Then I should see a list of items
+
+  Scenario: See recent item on the home paeg
+    Given an item with contents: New JRuby Release!
+    And I am on the home page
+
+    Then I should see "New JRuby Release!"
