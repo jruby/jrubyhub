@@ -12,5 +12,8 @@ group :test do
   gem 'cucumber', '0.7.2'
   gem 'rspec-rails', '2.0.0.beta.9.1'
   gem 'launchy'
+  gem 'watchr'
+  gem 'growl'
   gem 'spork', :git => 'http://github.com/nicksieger/spork.git'
 end
+
