@@ -36,10 +36,7 @@ def run_feature(pattern)
 end
 
 def run_all_features
-  kill_spork
-  run("jruby -S rake cucumber")
-  growl_result("rake cucumber")
-  spawn_spork
+  cucumber("features")
 end
 
 def cucumber(*args)
@@ -57,19 +54,11 @@ def spawn_spork
   end
 end
 
-def kill_spork
-  if @spork
-    require 'drb/drb'
-    DRbObject.new_with_uri('druby://127.0.0.1:8990').shutdown rescue puts "Spork shutdown failed"
-  end
-  @spork = nil
-end
-
 growl "Loading #{Pathname.new(__FILE__).relative_path_from(Pathname.new(Dir.pwd))}"
-
-run_all_features
+spawn_spork
 
 watch('^features/(.*)\.feature') {|md| run_feature(md[1]) } # re-run feature
+watch('^features/step_definitions/(.*)_steps\.rb') {|md| run_feature(md[1]) } # re-run feature
 watch('^lib/(.*)\.rb')              {|md| run_feature(md[1]) } # watch all libs
 watch('^app/models/(.*)\.rb')       {|md| run_feature(md[1]) } # watch all models
 watch('^app/controllers/(.*)_controller\.rb')  {|md| run_feature(md[1]) } # watch all controllers
