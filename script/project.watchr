@@ -10,8 +10,8 @@ def growl(message)
   end
 end
 
-def growl_result(message)
-  msg, meth = if $?.success?
+def growl_result(message, success = $?.success?)
+  msg, meth = if success
     ["Successful: #{message}", :notify_ok]
   else
     ["Failed: #{message}", :notify_error]
@@ -40,10 +40,13 @@ def run_all_features
 end
 
 def cucumber(*args)
+  require 'drb/drb'
+  @stream_server ||= DRb.start_service("druby://localhost:0")
+  @feature_server ||= DRbObject.new_with_uri("druby://127.0.0.1:8990")
   cmdlist = args.flatten.join(' ')
   growl("cucumber #{cmdlist}")
-  run("jruby script/cucumber --drb #{cmdlist}")
-  growl_result("cucumber #{cmdlist}")
+  failure = @feature_server.run(args.flatten, $stderr, $stdout)
+  growl_result("cucumber #{cmdlist}", !failure)
 end
 
 def spawn_spork
