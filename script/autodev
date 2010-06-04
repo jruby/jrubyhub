@@ -55,6 +55,11 @@ module Autodev
     cucumber("features")
   end
 
+  def run_both(pattern)
+    run_spec(pattern)
+    run_feature(pattern)
+  end
+
   def drb_client(port)
     trap_exit
     require 'drb/drb'
@@ -89,15 +94,14 @@ module Autodev
 
   def spawn_spork
     @spork ||= [Thread.new do
-                  growl "Starting Cucumber spork"
                   system 'jruby script/spork cucumber'
                 end,
                 Thread.new do
-                  growl "Starting RSpec spork"
                   system 'jruby script/spork rspec'
                 end,
                 Thread.new do
                   ["8989", "8990"].each {|port| Thread.pass until (drb_client(port).to_s rescue nil) }
+                  growl "Autodev cuke/rspec ready"
                   trap_exit
                 end]
   end
