@@ -71,8 +71,12 @@ module Autodev
     @spec_server ||= drb_client("8989")
     cmdlist = args.flatten.join(' ')
     growl("spec #{cmdlist}")
-    success = @spec_server.run(args.flatten, $stderr, $stdout)
-    growl_result("rspec #{cmdlist}", success)
+    begin
+      success = @spec_server.run(args.flatten, $stderr, $stdout)
+      growl_result("rspec #{cmdlist}", success)
+    rescue Exception => e
+      growl_result("rspec #{cmdlist} ERROR #{e.inspect}", false)
+    end
     trap_exit
   end
 
@@ -80,8 +84,12 @@ module Autodev
     @feature_server ||= drb_client("8990")
     cmdlist = args.flatten.join(' ')
     growl("cucumber #{cmdlist}")
-    failure = @feature_server.run(args.flatten, $stderr, $stdout)
-    growl_result("cucumber #{cmdlist}", !failure)
+    begin
+      failure = @feature_server.run(args.flatten, $stderr, $stdout)
+      growl_result("cucumber #{cmdlist}", !failure)
+    rescue Exception => e
+      growl_result("cucumber #{cmdlist} ERROR #{e.inspect}", false)
+    end
     trap_exit
   end
 
