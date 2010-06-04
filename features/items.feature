@@ -3,11 +3,13 @@ Feature: Items
   A JRuby.org user
   should be able to manipulate items
 
+  @wip
   Scenario: View item
     Given an item with content: New JRuby Release!
     When I am on the items page
     Then I should see "New JRuby Release!"
 
+  @wip
   Scenario: Create item
     Given I am on the items page
     When I follow "Create New Item"
