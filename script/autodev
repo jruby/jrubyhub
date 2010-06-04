@@ -1,0 +1,142 @@
+#!/usr/bin/env jruby
+
+require 'rubygems'
+require 'bundler'
+Bundler.setup(:default, :test)
+require 'watchr'
+require 'growl'
+
+module Autodev
+  def growl(message)
+    if Growl.installed?
+      Growl.notify_ok(message, :title => "Features")
+    else
+      puts message
+    end
+  end
+
+  def growl_result(message, success = $?.success?)
+    msg, meth = if success
+                  ["Successful: #{message}", :notify_ok]
+                else
+                  ["Failed: #{message}", :notify_error]
+                end
+    if Growl.installed?
+      Growl.send(meth, msg, :title => "Features")
+    else
+      puts message
+    end
+  end
+
+  def run(cmd)
+    puts(cmd)
+    system(cmd)
+    puts "*** #{Time.now} ***\n*** Exited with #{$?.exitstatus}\n\n"
+  end
+
+  def run_spec(pattern, subdir = '')
+    subdir << '/' unless subdir == '' || subdir =~ %r{./$}
+    if !(files = Dir["spec/#{subdir}**/*#{pattern}*_spec.rb"]).empty?
+      rspec(files)
+    end
+  end
+
+  def run_all_specs
+    rspec('spec')
+  end
+
+  def run_feature(pattern)
+    if !(files = Dir["features/**/*#{pattern}*.feature"]).empty?
+      cucumber(files)
+    end
+  end
+
+  def run_all_features
+    cucumber("features")
+  end
+
+  def drb_client(port)
+    trap_exit
+    require 'drb/drb'
+    @stream_server ||= DRb.start_service("druby://localhost:0")
+    DRbObject.new_with_uri("druby://127.0.0.1:#{port}")
+  end
+
+  def rspec(*args)
+    @spec_server ||= drb_client("8989")
+    cmdlist = args.flatten.join(' ')
+    growl("spec #{cmdlist}")
+    success = @spec_server.run(args.flatten, $stderr, $stdout)
+    growl_result("rspec #{cmdlist}", success)
+    trap_exit
+  end
+
+  def cucumber(*args)
+    @feature_server ||= drb_client("8990")
+    cmdlist = args.flatten.join(' ')
+    growl("cucumber #{cmdlist}")
+    failure = @feature_server.run(args.flatten, $stderr, $stdout)
+    growl_result("cucumber #{cmdlist}", !failure)
+    trap_exit
+  end
+
+  def trap_exit
+    trap('INT') do
+      puts "Exiting"
+      Java::java.lang.System.exit(0)
+    end
+  end
+
+  def spawn_spork
+    @spork ||= [Thread.new do
+                  growl "Starting Cucumber spork"
+                  system 'jruby script/spork cucumber'
+                end,
+                Thread.new do
+                  growl "Starting RSpec spork"
+                  system 'jruby script/spork rspec'
+                end,
+                Thread.new do
+                  ["8989", "8990"].each {|port| Thread.pass until (drb_client(port).to_s rescue nil) }
+                  trap_exit
+                end]
+  end
+end
+
+# This Watchr monkeypatch does a few things:
+# 1) allows it to detect new files created that match its patterns
+# 2) fix a bug where reloading the .watchr file itself caused an infinite loop.
+# 3) Patch in Autodev module into EvalContext
+module Watchr
+  class EventHandler::Portable
+    def refresh(monitored_paths)
+      initialize                  # reset reference times
+      update_monitored_paths(monitored_paths)
+    end
+
+    def update_monitored_paths(paths)
+      @monitored_paths = paths
+    end
+  end
+  class Controller
+    def self.new(*)
+      controller = super
+      controller.watch_for_new_files
+      controller
+    end
+    def watch_for_new_files
+      @new_file_thread = Thread.new do
+        loop do
+          @handler.update_monitored_paths(monitored_paths)
+          sleep(2)
+        end
+      end
+    end
+  end
+  class Script::EvalContext
+    include Autodev
+  end
+end
+
+ARGV.clear; ARGV.unshift "script/project.watchr"
+load File.join(Gem.loaded_specs['watchr'].full_gem_path, 'bin', 'watchr')
