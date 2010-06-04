@@ -1,18 +1,11 @@
-require 'rubygems'
-require 'spork'
-require 'rspec'
-# Spork/RSpec2 compatibility: set Spec to RSpec
-old_verbose, $VERBOSE = $VERBOSE, nil
-Spec = RSpec
-$VERBOSE = old_verbose
-
-Spork.prefork do
-# This file is copied to ~/spec when you run 'ruby script/generate rspec'
-# from the project root directory.
 ENV["RAILS_ENV"] ||= 'test'
 require File.dirname(__FILE__) + "/../config/environment" unless defined?(Rails)
+require 'spork'
+# This file is copied to ~/spec when you run 'ruby script/generate rspec'
+# from the project root directory.
 require 'rspec/rails'
 
+Spork.prefork do
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
