@@ -2,7 +2,6 @@
 
 growl "Loading #{Pathname.new(__FILE__).relative_path_from(Pathname.new(Dir.pwd))}"
 spawn_spork
-trap_exit
 
 watch('^features/(.*)\.feature') {|md| run_feature(md[1]) } # re-run feature
 watch('^features/step_definitions/(.*)_steps\.rb') {|md| run_feature(md[1]) } # re-run feature

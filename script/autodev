@@ -93,6 +93,7 @@ module Autodev
   end
 
   def spawn_spork
+    trap_exit
     @spork ||= [Thread.new do
                   system 'jruby script/spork cucumber'
                 end,
