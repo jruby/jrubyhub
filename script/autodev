@@ -125,7 +125,7 @@ end
 module Watchr
   class EventHandler::Portable
     def refresh(monitored_paths)
-      initialize                  # reset reference times
+      initialize                # 1) reset reference times
       update_monitored_paths(monitored_paths)
     end
 
@@ -133,7 +133,7 @@ module Watchr
       @monitored_paths = paths
     end
   end
-  class Controller
+  class Controller              # 2) pick up new paths
     def self.new(*)
       controller = super
       controller.watch_for_new_files
@@ -149,7 +149,7 @@ module Watchr
     end
   end
   class Script::EvalContext
-    include Autodev
+    include Autodev             # 3) include Autodev methods
   end
 end
 
