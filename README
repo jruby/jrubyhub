@@ -25,3 +25,10 @@ mode.
   up two Spork servers, one each for Cucumber and RSpec, as well as a
   Watchr script (script/project.watchr) that pings Cucumber and/or
   RSpec every time the appropriate files are touched.
+
+== Production notes
+
+JRubyHub uses Neo4j for data storage. To specify the disk path where
+data should be kept, set the Java system property 'jrubyhub.home'. The
+path defaults to the system-wide temporary directory found in
+'java.io.tmpdir' + '/jrubyhub' if not specified.

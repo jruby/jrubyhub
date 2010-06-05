@@ -38,5 +38,13 @@ JRubyHub::Application.configure do
   # config.action_mailer.raise_delivery_errors = false
 
   # Enable threaded mode
-  # config.threadsafe!
+  config.threadsafe!
+
+  # Neo4j storage
+  hub_path = ENV_JAVA['jrubyhub.home'] || File.join(ENV_JAVA['java.io.tmpdir'], 'jrubyhub')
+  config.neo4j.storage_path = "#{hub_path}/neo4j"
+  config.lucene.storage_path = "#{hub_path}/lucene"
+  config.lucene.store_on_file = true
+  FileUtils.mkdir_p(config.neo4j.storage_path)
+  FileUtils.mkdir_p(config.lucene.storage_path)
 end
