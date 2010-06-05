@@ -76,6 +76,7 @@ module Autodev
       growl_result("rspec #{cmdlist}", success)
     rescue Exception => e
       growl_result("rspec #{cmdlist} ERROR #{e.inspect}", false)
+      puts e.inspect, *e.backtrace
     end
     trap_exit
   end
@@ -89,6 +90,7 @@ module Autodev
       growl_result("cucumber #{cmdlist}", !failure)
     rescue Exception => e
       growl_result("cucumber #{cmdlist} ERROR #{e.inspect}", false)
+      puts e.inspect, *e.backtrace
     end
     trap_exit
   end
