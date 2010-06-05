@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   def index
+    @items = ItemList.enumerator
   end
 
   def show
@@ -10,6 +11,9 @@ class ItemsController < ApplicationController
   end
 
   def create
+    Item.create(params[:item])
+    flash[:notice] = "Thanks, we added your item!"
+    redirect_to :items
   end
 
   def edit

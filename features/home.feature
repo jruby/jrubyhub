@@ -8,7 +8,6 @@ Feature: Home page
     
     Then I should see a list of items
 
-  @wip
   Scenario: See recent item on the home page
     Given an item with content: New JRuby Release!
     And I am on the home page
