@@ -7,6 +7,7 @@ Feature: Items
     Given an item with content: New JRuby Release!
     When I am on the items page
     Then I should see "New JRuby Release!"
+    And I should see "Created less than a minute ago"
 
   Scenario: Create item
     Given I am on the items page

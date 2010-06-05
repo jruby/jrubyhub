@@ -4,6 +4,9 @@
     <div class="content">
       <%= item.content %>
     </div>
+    <div class="when">
+      Created <%= time_ago_in_words(item.created_at) %> ago
+    </div>
   </div>
   <% end -%>
 </div>
