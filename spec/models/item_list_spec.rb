@@ -29,3 +29,17 @@ describe ItemList, "empty?" do
     ItemList.should_not be_empty
   end
 end
+
+describe ItemList, "enumerator" do
+  it "should return an Enumerable over the list" do
+    1.upto(10) {|i| Item.create(:content => 10 - i)}
+    ItemList.enumerator.each_with_index do |node,i|
+      node.content.should == i
+    end
+  end
+
+  it "should stop after the requested limit" do
+    1.upto(10) {|i| Item.create(:content => 10 - i)}
+    ItemList.enumerator(5).to_a.length.should == 5
+  end
+end
