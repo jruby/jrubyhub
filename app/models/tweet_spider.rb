@@ -28,7 +28,9 @@ class TweetSpider < Neo4j::Model
         end
       end
     end
-  rescue
+  rescue => e
+    Rails.logger.warn "Unable to fetch tweets: #{e.inspect}"
+    Rails.logger.debug("  " + e.backtrace.join("\n  "))
     props.dup
   end
 
