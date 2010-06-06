@@ -32,3 +32,13 @@ JRubyHub uses Neo4j for data storage. To specify the disk path where
 data should be kept, set the Java system property 'jrubyhub.home'. The
 path defaults to the system-wide temporary directory found in
 'java.io.tmpdir' + '/jrubyhub' if not specified.
+
+To use Warbler to create a .war file of JRubyHub, you'll need to
+perform the following steps in order to work an issue with Warbler and
+Bundler interaction:
+
+    $ bundle install --without test
+    $ warble
+
+If you want to go back to develop-and-test mode, you'll need to
+`bundle install` again.
