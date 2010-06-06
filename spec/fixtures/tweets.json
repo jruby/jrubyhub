@@ -1,0 +1,238 @@
+{
+  "max_id": 15501743592,
+  "results": [
+    {
+      "created_at": "Sat, 05 Jun 2010 17:43:18 +0000",
+      "profile_image_url": "http://a1.twimg.com/profile_images/143133828/Ruby_normal.jpg",
+      "from_user": "rorguru",
+      "text": "Ruby on Rails Developer Rails Programmer JRuby Engineer ROR ... http://bit.ly/cik61r",
+      "to_user_id": null,
+      "metadata": {
+        "result_type": "recent"
+      },
+      "id": 15501743592,
+      "geo": null,
+      "from_user_id": 12117953,
+      "iso_language_code": "en",
+      "source": "&lt;a href=&quot;http://twitterfeed.com&quot; rel=&quot;nofollow&quot;&gt;twitterfeed&lt;/a&gt;"
+    },
+    {
+      "created_at": "Sat, 05 Jun 2010 17:28:18 +0000",
+      "profile_image_url": "http://a3.twimg.com/profile_images/409585603/charles_normal.jpg",
+      "from_user": "headius",
+      "text": "I'll be at the Rails 3 Ropes tutorial at RailsConf using JRuby if anyone wants to pair; should be fun for all :)",
+      "to_user_id": null,
+      "metadata": {
+        "result_type": "recent"
+      },
+      "id": 15500928017,
+      "geo": null,
+      "from_user_id": 70873,
+      "iso_language_code": "en",
+      "source": "&lt;a href=&quot;http://itunes.apple.com/app/twitter/id333903271?mt=8&quot; rel=&quot;nofollow&quot;&gt;Twitter for iPhone&lt;/a&gt;"
+    },
+    {
+      "created_at": "Sat, 05 Jun 2010 16:00:47 +0000",
+      "profile_image_url": "http://a3.twimg.com/profile_images/409585603/charles_normal.jpg",
+      "from_user": "headius",
+      "text": "@Tombar @fedesilva I talked to @johnwoodell and apparently Haml does some peculiar things. May or may not be a JRuby issue...",
+      "to_user_id": 28179083,
+      "metadata": {
+        "result_type": "recent"
+      },
+      "id": 15495780183,
+      "geo": null,
+      "to_user": "tombar",
+      "from_user_id": 70873,
+      "iso_language_code": "en",
+      "source": "&lt;a href=&quot;http://itunes.apple.com/app/twitter/id333903271?mt=8&quot; rel=&quot;nofollow&quot;&gt;Twitter for iPhone&lt;/a&gt;"
+    },
+    {
+      "created_at": "Sat, 05 Jun 2010 13:57:16 +0000",
+      "profile_image_url": "http://s.twimg.com/a/1275505066/images/default_profile_1_normal.png",
+      "from_user": "wkbruce",
+      "text": "JRuby : JRuby upgrade features Java accommodations - NetworkWorld.com http://dlvr.it/1SVzj",
+      "to_user_id": null,
+      "metadata": {
+        "result_type": "recent"
+      },
+      "id": 15488408242,
+      "geo": null,
+      "from_user_id": 103032302,
+      "iso_language_code": "en",
+      "source": "&lt;a href=&quot;http://dlvr.it&quot; rel=&quot;nofollow&quot;&gt;dlvr.it&lt;/a&gt;"
+    },
+    {
+      "created_at": "Sat, 05 Jun 2010 13:56:05 +0000",
+      "profile_image_url": "http://a3.twimg.com/profile_images/363866475/twitterProfilePhoto_normal.jpg",
+      "from_user": "taeyoungo",
+      "text": "RT @_Rahul_G_: RT @m_st: A very good presentation from Alex Buckley on the JVM &quot;Towards a Universal VM&quot;: http://is.gd/cCASf #java #jruby #jvm #qcon",
+      "to_user_id": null,
+      "metadata": {
+        "result_type": "recent"
+      },
+      "id": 15488345833,
+      "geo": null,
+      "from_user_id": 16084341,
+      "iso_language_code": "en",
+      "source": "&lt;a href=&quot;http://github.com/cezarsa/chromed_bird&quot; rel=&quot;nofollow&quot;&gt;Chromed Bird&lt;/a&gt;"
+    },
+    {
+      "created_at": "Sat, 05 Jun 2010 13:49:37 +0000",
+      "profile_image_url": "http://a1.twimg.com/profile_images/325509598/logblack_normal.PNG",
+      "from_user": "detroitjava",
+      "text": "Construction going on at #nextwave #detroit should be ready for Joe O'Briens @objo talk June 16th on JRuby  http://bit.ly/CIVWk",
+      "to_user_id": null,
+      "metadata": {
+        "result_type": "recent"
+      },
+      "id": 15487997238,
+      "geo": null,
+      "from_user_id": 30376184,
+      "iso_language_code": "en",
+      "source": "&lt;a href=&quot;http://www.tweetdeck.com/&quot; rel=&quot;nofollow&quot;&gt;TweetDeck&lt;/a&gt;"
+    },
+    {
+      "created_at": "Sat, 05 Jun 2010 13:32:41 +0000",
+      "profile_image_url": "http://a1.twimg.com/profile_images/59578326/hmm_normal.png",
+      "from_user": "mcculls",
+      "text": "RT @_Rahul_G_: RT @m_st: A very good presentation from Alex Buckley on the JVM &quot;Towards a Universal VM&quot;: http://is.gd/cCASf #java #jruby #jvm #qcon",
+      "to_user_id": null,
+      "metadata": {
+        "result_type": "recent"
+      },
+      "id": 15487119648,
+      "geo": null,
+      "from_user_id": 2127537,
+      "iso_language_code": "en",
+      "source": "&lt;a href=&quot;http://github.com/cezarsa/chromed_bird&quot; rel=&quot;nofollow&quot;&gt;Chromed Bird&lt;/a&gt;"
+    },
+    {
+      "created_at": "Sat, 05 Jun 2010 13:02:47 +0000",
+      "profile_image_url": "http://a3.twimg.com/profile_images/52551367/ONormal_normal.jpg",
+      "from_user": "olabini",
+      "text": "Just got my copy of the Japanase version of Practical JRuby on Rails. Wowsie. Just wish I could read Japanese. =)",
+      "to_user_id": null,
+      "metadata": {
+        "result_type": "recent"
+      },
+      "id": 15485647178,
+      "geo": null,
+      "from_user_id": 142025,
+      "iso_language_code": "en",
+      "source": "&lt;a href=&quot;http://www.tweetdeck.com&quot; rel=&quot;nofollow&quot;&gt;TweetDeck&lt;/a&gt;"
+    },
+    {
+      "created_at": "Sat, 05 Jun 2010 11:41:48 +0000",
+      "profile_image_url": "http://a3.twimg.com/profile_images/671570707/iphone_001_normal.JPG",
+      "from_user": "mota5t",
+      "text": "RT @jruby: RT @murphee: Wanna know what the JRuby team's up to in 1.5/1.6, what works with AOT...? Interview with @headius  http://bit.ly/aj3xCa",
+      "to_user_id": null,
+      "metadata": {
+        "result_type": "recent"
+      },
+      "id": 15482181845,
+      "geo": null,
+      "from_user_id": 82322424,
+      "iso_language_code": "en",
+      "source": "&lt;a href=&quot;http://itunes.apple.com/app/twitter/id333903271?mt=8&quot; rel=&quot;nofollow&quot;&gt;Twitter for iPhone&lt;/a&gt;"
+    },
+    {
+      "created_at": "Sat, 05 Jun 2010 11:27:28 +0000",
+      "profile_image_url": "http://a1.twimg.com/profile_images/687809316/wordpressapi-logo_normal.jpg",
+      "from_user": "wordpressapi",
+      "text": "ActiveRecord-JDBC is for use with JRuby only.... http://is.gd/aZILL",
+      "to_user_id": null,
+      "metadata": {
+        "result_type": "recent"
+      },
+      "id": 15481639144,
+      "geo": null,
+      "from_user_id": 92028086,
+      "iso_language_code": "en",
+      "source": "&lt;a href=&quot;http://twitter.com/&quot;&gt;web&lt;/a&gt;"
+    },
+    {
+      "created_at": "Sat, 05 Jun 2010 11:23:54 +0000",
+      "profile_image_url": "http://a3.twimg.com/profile_images/655431923/avator_trans_normal.png",
+      "from_user": "kayakaya",
+      "text": "RT @machu: [日記] Proc を使って AppEngine の JRuby でセーフレベルを変更する http://bit.ly/9C0AHG",
+      "to_user_id": null,
+      "metadata": {
+        "result_type": "recent"
+      },
+      "id": 15481508705,
+      "geo": null,
+      "from_user_id": 307870,
+      "iso_language_code": "ja",
+      "source": "&lt;a href=&quot;http://twitterfeed.com&quot; rel=&quot;nofollow&quot;&gt;twitterfeed&lt;/a&gt;"
+    },
+    {
+      "created_at": "Sat, 05 Jun 2010 10:15:58 +0000",
+      "profile_image_url": "http://a1.twimg.com/profile_images/945812766/fx_normal.jpg",
+      "from_user": "FlexTech01",
+      "text": "RT @infoq: Article:The State of JRuby: 1.5, AOT, Java 7 http://bit.ly/b8g3p5",
+      "to_user_id": null,
+      "metadata": {
+        "result_type": "recent"
+      },
+      "id": 15479188538,
+      "geo": null,
+      "from_user_id": 121423411,
+      "iso_language_code": "en",
+      "source": "&lt;a href=&quot;http://twitterfeed.com&quot; rel=&quot;nofollow&quot;&gt;twitterfeed&lt;/a&gt;"
+    },
+    {
+      "created_at": "Sat, 05 Jun 2010 09:48:47 +0000",
+      "profile_image_url": "http://a1.twimg.com/profile_images/16229292/face_normal.jpg",
+      "from_user": "machu",
+      "text": "[日記] Proc を使って AppEngine の JRuby でセーフレベルを変更する http://bit.ly/9C0AHG",
+      "to_user_id": null,
+      "metadata": {
+        "result_type": "recent"
+      },
+      "id": 15478290549,
+      "geo": null,
+      "from_user_id": 65248,
+      "iso_language_code": "ja",
+      "source": "&lt;a href=&quot;http://twitterfeed.com&quot; rel=&quot;nofollow&quot;&gt;twitterfeed&lt;/a&gt;"
+    },
+    {
+      "created_at": "Sat, 05 Jun 2010 09:37:01 +0000",
+      "profile_image_url": "http://a3.twimg.com/profile_images/778244793/feed-icon_normal.jpg",
+      "from_user": "jpmino_feed",
+      "text": "Proc を使って AppEngine の JRuby でセーフレベルを変更する: Proc を使って AppEngine の JRuby でセーフレベルを変更するtDiary を Google App Engi... http://bit.ly/amCRRv #Blogger",
+      "to_user_id": null,
+      "metadata": {
+        "result_type": "recent"
+      },
+      "id": 15477901244,
+      "geo": null,
+      "from_user_id": 105291197,
+      "iso_language_code": "it",
+      "source": "&lt;a href=&quot;http://twitterfeed.com&quot; rel=&quot;nofollow&quot;&gt;twitterfeed&lt;/a&gt;"
+    },
+    {
+      "created_at": "Sat, 05 Jun 2010 08:52:43 +0000",
+      "profile_image_url": "http://a1.twimg.com/profile_images/38063482/IMG_0026_normal.jpg",
+      "from_user": "robilad",
+      "text": "RT @_Rahul_G_: RT @m_st: A very good presentation from Alex Buckley on the JVM &quot;Towards a Universal VM&quot;: http://is.gd/cCASf #java #jruby #jvm #qcon",
+      "to_user_id": null,
+      "metadata": {
+        "result_type": "recent"
+      },
+      "id": 15476410259,
+      "geo": null,
+      "from_user_id": 116788,
+      "iso_language_code": "en",
+      "source": "&lt;a href=&quot;http://github.com/cezarsa/chromed_bird&quot; rel=&quot;nofollow&quot;&gt;Chromed Bird&lt;/a&gt;"
+    }
+  ],
+  "since_id": 0,
+  "refresh_url": "?since_id=15501743592&q=jruby",
+  "next_page": "?page=2&max_id=15501743592&q=jruby",
+  "page": 10,
+  "results_per_page": 15,
+  "completed_in": 0.040937,
+  "query": "jruby"
+}
