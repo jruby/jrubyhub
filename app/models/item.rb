@@ -2,6 +2,8 @@ class Item < Neo4j::Model
   property :content
   property :created_at, :type => DateTime
 
+  index :content, :created_at
+
   before_create :before_create_set_timestamp
   after_create :after_create_add_to_item_list
 
