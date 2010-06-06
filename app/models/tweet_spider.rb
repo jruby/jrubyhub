@@ -65,7 +65,7 @@ class TweetSpider < Neo4j::Model
     end
 
     def read
-      RestClient.get("http://search.twitter.com/search.json#{@uri}")
+      ::RestClient.get("http://search.twitter.com/search.json#{@uri}")
     end
   end
 end

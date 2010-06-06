@@ -17,7 +17,7 @@ class Item < Neo4j::Model
 
   private
   def before_create_set_timestamp
-    self.created_at = DateTime.now
+    self.created_at ||= DateTime.now
   end
 
   def after_create_add_to_item_list
