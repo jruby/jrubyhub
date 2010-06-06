@@ -1,0 +1,9 @@
+<div class="content">
+  <%= tweet_text(item) %>
+</div>
+<div class="when">
+  Posted by <%= tweet_author(item) %> <%= time_ago_in_words(item.created_at) %> ago
+</div>
+<div class="icon">
+  <%= tweet_icon(item) %>
+</div>

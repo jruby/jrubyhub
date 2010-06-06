@@ -1,12 +1,7 @@
 <div class="items">
-  <% @items.each do |item| -%>
-  <div class="item">
-    <div class="content">
-      <%= item.content %>
-    </div>
-    <div class="when">
-      Posted <%= time_ago_in_words(item.created_at) %> ago
-    </div>
+<% @items.each do |item| -%>
+  <div class="<%= item_classes(item) %>" id="item_<%= item.id %>">
+<%= render_item(item) %>
   </div>
-  <% end -%>
+<% end -%>
 </div>

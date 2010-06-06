@@ -15,6 +15,10 @@ class Item < Neo4j::Model
     list(:items).next
   end
 
+  def self.css_name
+    model_name.underscore
+  end
+
   private
   def before_create_set_timestamp
     self.created_at ||= DateTime.now
