@@ -231,7 +231,7 @@
   "since_id": 0,
   "refresh_url": "?since_id=15501743592&q=jruby",
   "next_page": "?page=2&max_id=15501743592&q=jruby",
-  "page": 10,
+  "page": 1,
   "results_per_page": 15,
   "completed_in": 0.040937,
   "query": "jruby"
