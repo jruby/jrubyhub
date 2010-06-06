@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.0.beta3'
 gem 'jruby-openssl'
+gem 'json_pure'
 gem 'neo4j-rails'
 gem 'twitter-text'
 gem 'rest-client'
