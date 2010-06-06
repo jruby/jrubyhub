@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.0.beta3'
 gem 'jruby-openssl'
-gem 'neo4j-rails', :git => 'git://github.com/nicksieger/neo4j-rails.git'
+gem 'neo4j-rails'
 gem 'twitter-text'
 gem 'rest-client'
 
