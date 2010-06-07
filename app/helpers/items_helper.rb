@@ -20,10 +20,10 @@ module ItemsHelper
   end
 
   def tweet_text(tweet)
-    auto_link(h(tweet.content)).html_safe
+    auto_link(tweet.content).html_safe
   end
 
   def tweet_icon(tweet)
-    image_tag(tweet.profile_image_url, :size => '48x48', :alt => h(tweet.from_user))
+    image_tag(tweet.profile_image_url, :size => '48x48', :alt => tweet.from_user)
   end
 end

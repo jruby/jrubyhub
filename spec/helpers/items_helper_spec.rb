@@ -3,7 +3,7 @@ require File.expand_path('../../spec_helper', __FILE__)
 describe ItemsHelper do
   before :each do
     @tweet = Tweet.new :from_user => "nicksieger",
-      :content => "Hello <script>alert(@nicksieger)</script>",
+      :content => "Hello &lt;script&gt;alert(@nicksieger)&lt;/script&gt;",
       :profile_image_url => "http://a3.twimg.com/profile_images/409585603/charles_normal.jpg"
   end
 
@@ -12,7 +12,7 @@ describe ItemsHelper do
       tweet_text(@tweet).should =~ /@<a/
     end
 
-    it "should escape tweet content before auto-linking" do
+    it "should not escape tweet content before auto-linking" do
       tweet_text(@tweet).should =~ /Hello &lt;script&gt;/
     end
   end
