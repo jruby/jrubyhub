@@ -1,0 +1,27 @@
+.item {
+  margin: 5px 0;
+  padding: 3px 0;
+  display: block;
+  min-height: 56px;
+  border-bottom: 1px solid #eee;
+}
+
+.item .tweet-body {
+  margin-left: 56px;
+}
+
+.item .content {
+  font-size: .9em;
+  margin-bottom: 2px;
+}
+
+.item .when {
+  font-style: italic;
+  font-size: .75em;
+}
+
+.item .icon {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+}

@@ -1,7 +1,7 @@
-<div class="items">
+<ol class="items">
 <% @items.each do |item| -%>
-  <div class="<%= item_classes(item) %>" id="item_<%= item.id %>">
+  <li class="<%= item_classes(item) %>" id="item_<%= item.id %>">
 <%= render_item(item) %>
-  </div>
+  </li>
 <% end -%>
-</div>
+</old>
