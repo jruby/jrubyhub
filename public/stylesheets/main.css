@@ -1,0 +1,403 @@
+/*-----Global-----*/
+
+
+* {
+outline:none;
+padding:0px;
+margin:0px;
+font-family:"Lucida Grande", tahoma, arial;
+}
+
+body.home {
+background:url('http://jruby.org/images/home_body_bg.png') repeat-x 0px 26px;
+}
+
+body {
+background:#333 url('http://jruby.org/images/white_bg.png') repeat-x 0px 26px;
+}
+
+div.cms_edit_container {
+float:left;
+}
+
+* input, * input:active, * input:focus {
+outline:none;
+}
+
+
+* img {
+border:none;
+}
+
+img.x {
+width:100%;
+height:100%;
+}
+
+div#container {
+width:925px;
+margin:0px auto;
+}
+
+#content h1, #content h2, #content h3, .body > p, .body > ol, .body > ul, .body > pre {
+    margin-bottom: 1em;
+}
+
+#content ul, #content ol {
+    margin-left: 2.5em;
+    padding-left: 0;
+}
+
+#content code, #content pre, .highlight pre, .highlight pre span {
+    font-family: monospace;
+}
+
+.body {
+    margin-bottom: 3em;
+}
+
+/*------Main Nav-------*/
+
+div#main_nav {
+height:23px;
+padding-top:2px;
+border-bottom:1px solid #fff;
+background:url('http://jruby.org/images/pinstripe_bg.png');
+}
+
+div#main_nav .wrapper {
+width:870px;
+margin:0px auto;
+padding:0px 30px;
+}
+
+div#main_nav .wrapper ul li {
+float:left;
+list-style:none;
+padding:0px;
+margin-right:20px;
+}
+
+div#main_nav .wrapper ul li a{
+color:#ccc;
+text-decoration:none;
+}
+
+
+div#main_nav .wrapper ul li.on a {
+color:#fff;
+}
+
+
+/*-----Latest Release------*/
+
+div#latest_release {
+width:180px;
+height:42px;
+padding:10px 10px 10px 30px;
+position:absolute;
+font-size:11px;
+background:url('http://jruby.org/images/latest_release_bg.png') no-repeat;
+}
+
+div#latest_release a {
+color:#007BFF;
+text-decoration:none;
+}
+
+.home div#latest_release {
+left:670px;
+top:40px;
+}
+
+div#latest_release {
+left:687px;
+top:28px;
+}
+
+
+/*-------HEADERS--------*/
+
+div#container div#header {
+width:925px;
+height:107px;
+position:relative;
+}
+
+div#container div#header img {
+margin:5px 0px 0px 25px;
+}
+
+div#container div#header h1 {
+display:none;
+}
+
+
+.home div#container div#header h1 {
+display:none;
+}
+
+.home div#container div#header {
+width:925px;
+height:221px;
+position:relative;
+background:url('http://jruby.org/images/home_header_logo.png') no-repeat 0px -1px;
+}
+
+
+
+/*--------HOME-------------*/
+
+
+/*-----HERO------*/
+
+
+
+
+div#container div#hero {
+height:363px;
+background:url('http://jruby.org/images/hero_bg.png') no-repeat 0px -80px;
+}
+
+div#container div#hero div.feature {
+float:left;
+width:276px;
+height:230px;
+margin:10px 0px 10px 25px;
+text-align:center;
+background:url('http://jruby.org/images/features_sprite.png') no-repeat -810px 0px;
+}
+
+
+/*-Why JRuby-*/
+
+
+
+div#container div#hero a{
+color:#fff;
+text-decoration:none;
+}
+
+div#container div#hero div.feature h3 {
+margin:20px 0px 90px 0px;
+font-weight:normal;
+font-size:20px;
+}
+
+div#container div#hero div.feature ul li {
+margin:0px 0px 15px 0px;
+}
+
+div#container div#hero div#feature_1.feature ul {
+margin:0px 0px 0px 70px;
+}
+div#container div#hero div#why_jruby div#feature_1.feature {
+background:url('http://jruby.org/images/features_sprite.png') no-repeat 0px 0px;
+}
+
+div#container div#hero div#feature_2.feature ul {
+margin:0px 0px 0px 40px;
+}
+div#container div#hero div#why_jruby div#feature_2.feature {
+background:url('http://jruby.org/images/features_sprite.png') no-repeat -271px 0px;
+}
+
+div#container div#hero div#feature_3.feature ul {
+margin:0px 0px 0px 90px;
+}
+div#container div#hero div#why_jruby div#feature_3.feature {
+background:url('http://jruby.org/images/features_sprite.png') no-repeat -540px 0px;
+}
+
+
+
+/*-Download-*/
+
+div#download div#link,
+div#download div#instructions {
+float:left;
+margin:30px 0px;
+}
+
+div#download div#link {
+width:240px;
+text-align:center;
+line-height:30px;
+font-size:14px;
+}
+
+div#download a {
+color:#fff;
+
+text-decoration:none;
+}
+
+div#download div#instructions {
+width:530px;
+padding-left:100px;
+position:relative;
+}
+
+div#download div#instructions ol li{
+font-size:23px;
+margin:0px 0px 45px 0px;
+}
+
+div#download div#instructions p.red_button {
+position:absolute;
+left:380px;
+top:172px;
+width:166px;
+height:32px;
+padding:7px 0px 0px 8px;
+font-size:13px;
+background:url('http://jruby.org/images/button_with_right_arrow.png') no-repeat;
+}
+
+
+
+/*-Learn-*/
+
+div#learn div.feature img {
+border:5px solid #b46c6b;
+margin:30px 0px 20px 0px;
+}
+
+
+
+/*-Get Involved-*/
+
+div#get_involved ul li {
+width:360px;
+padding-left:50px;
+font-size:30px;
+list-style:none;
+float:left;
+margin:50px 0px 20px 0px;
+}
+
+div#get_involved ul li#repo {
+background:url('http://jruby.org/images/get_involved_icons.png') no-repeat 0px 1px;
+}
+
+div#get_involved ul li#mailing_lists {
+background:url('http://jruby.org/images/get_involved_icons.png') no-repeat 0px -100px;
+}
+
+div#get_involved ul li#issue_tracker {
+background:url('http://jruby.org/images/get_involved_icons.png') no-repeat 0px -45px;
+}
+
+div#get_involved ul li#irc {
+background:url('http://jruby.org/images/get_involved_icons.png') no-repeat 2px -143px;
+}
+
+
+/*--------Latest-----------*/
+
+div#latest {
+width:100%;
+float:left;
+background:url('http://jruby.org/images/pinstripe_bg.png');
+}
+
+div#latest a {
+color:#fff;
+}
+
+div#latest ul {
+color:#bbb;
+margin-left:12px;
+font-size:13px;
+}
+
+div#latest div.wrapper {
+width:926px;
+margin:0px auto;
+}
+
+div#latest div#news,
+div#latest div#twitter {
+	width:400px;
+	float:left;
+margin:50px 0px 30px 60px; 
+}
+
+div#latest div#news {
+margin-left:50px;
+
+}
+
+
+div#latest h2 {
+text-indent:225px;
+padding-top:4px;
+width:300px;
+height:26px;
+overflow:hidden;
+margin-bottom:20px;
+background:url('http://jruby.org/images/recent_titles.png') no-repeat;
+}
+
+div#latest div#twitter h2 {
+text-indent:245px;
+background:url('http://jruby.org/images/recent_titles.png') no-repeat -458px 0px;
+}
+
+div#latest div#news h3 a {
+color:#007BFF;
+font-weight:normal;
+font-size:22px;
+text-decoration:none;
+}
+
+div#latest div#news h4 {
+font-size:12px;
+color:#666;
+font-weight:normal;
+margin-bottom:30px;
+}
+
+div#latest p {
+
+color:#D1D0D0;
+line-height:25px;
+font-size:13px;
+margin-bottom:20px;
+}
+
+
+div#latest div#twitter {
+color:#ddd;
+}
+
+div#latest div#twitter ul li {
+list-style:none;
+font-size:13px;
+margin:0px 0px 30px 0px;
+}
+
+
+div#latest div#twitter ul li a {
+color:#fff;
+}
+
+
+/*---------Main White Content---------*/
+
+div#container div#content {
+width:879px;
+padding:50px 40px 0px 27px;
+margin:38px auto 0px auto;
+background:url('http://jruby.org/images/white_content_top.png') no-repeat 0px 0px;
+}
+
+div#container div#content div#white {
+background:#fff;
+width:90%;
+padding:0px 5% 50px 5%;
+min-height:500px;
+}
+
+
+

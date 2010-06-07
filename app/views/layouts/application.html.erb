@@ -1,6 +1,8 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title>JRubyHub</title>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js" %>
@@ -8,14 +10,56 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+  <div id="main_nav">
+    <div class="wrapper">
+      <div id="menu" class="menu">
+        <ul>
+          <li id="page_1" class="depth-1 first">
+            <a href="http://jruby.org/">Home</a>
+          </li>
+          <li id="page_5" class="depth-1">
+            <a href="http://jruby.org/news">News</a>
+          </li>
+          <li id="page_8" class="depth-1">
+            <a href="http://jruby.org/download">Download</a>
+          </li>
+          <li id="page_10" class="depth-1">
+            <a href="http://jruby.org/getting-started">Getting Started</a>
+          </li>
+          <li id="page_9" class="depth-1">
+            <a href="http://jruby.org/community">Community</a>
+          </li>
+          <li id="page_13" class="depth-1">
+            <a href="http://jruby.org/documentation">Documentation</a>
+          </li>
+          <li id="page_15" class="depth-1">
+            <a href="http://jruby.org/security">Security</a>
+          </li>
+          <li id="page_14" class="depth-1 last">
+            <a href="http://jruby.org/contribute">Contribute</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <div id="header">
+      <a href="/"><img src="http://jruby.org/images/white_header_logo.png"></a>
+      <h1>JRuby: 100% Pure-Java Implementation of the Ruby Programming Language.</h1>
+    </div>
+    <div id="content">
+      <div id="white">
+        <div class="body">
+          <% if flash[:notice] -%>
+          <div class="notice">
+            <%= flash[:notice] %>
+          </div>
+          <% end -%>
 
-<% if flash[:notice] -%>
-<div class="notice">
-  <%= flash[:notice] %>
-</div>
-<% end -%>
-
-<%= yield %>
-
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
