@@ -7,11 +7,19 @@ class Tweet < Item
   index :from_user, :content, :created_at
 
   def self.from_data(hash)
-    hash['tweet_id'] = hash['id']
-    hash['created_at'] = hash['created_at'].to_datetime
-    hash['content'] = hash['text']
-    hash.delete('id')
-    hash.delete('text')
-    Tweet.create!(hash)
+    attr_arr = hash.map do |k,v|
+      case k
+      when "id"
+        [:tweet_id, v]
+      when "created_at"
+        [:created_at, v.to_datetime]
+      when "text"
+        [:content, v]
+      else
+        [k.to_sym, v]
+      end
+    end
+    attrs = Hash[*attr_arr.flatten]
+    create!(attrs)
   end
 end
