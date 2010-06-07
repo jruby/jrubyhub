@@ -6,6 +6,7 @@ gem 'json_pure'
 gem 'neo4j-rails'
 gem 'twitter-text'
 gem 'rest-client'
+gem 'warbler'
 
 group :test do
   gem 'capybara'
