@@ -1,3 +1,4 @@
+begin
 Warbler::Task.new
 
 obfuscated = Warbler::Task.new(:obfuscated)
@@ -30,4 +31,5 @@ namespace :obfuscated do
     rm_f FileList['**/*.class']
   end
 end
-
+rescue
+end
